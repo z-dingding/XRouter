@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hxzk.bj.differnertprocess">
+
+
+    <application>
+    <!--   android:process
+如果该属性指定名称以“：”开头，则一个新的专属于该应用的进程将会被创建。
+如果该进程名以小写字母开头，则为该activity提供权限以让其在一个全局的进程中运行。这样会允许多个应用的不同组件共用一个进程，以便节省资源。-->
+
+
+        <!--如果被设置的进程名是以一个冒号开头的android:process=":remote"，-->
+        <!--则这个新的进程对于这个应用来说是私有的，当它被需要或者这个服务需要在新进程中运行的时候-->
+        <!--，这个新进程将会被创建。如果这个进程的名字是以小写字符开头的，-->
+        <!--则这个服务将运行在一个以这个名字命名的全局的进程中，当然前提是它有相应的权限。-->
+        <!--这将允许在不同应用中的各种组件可以共享一个进程，从而减少资源的占用。-->
+        <!--说简单点，设置android:process 参数，相当于有“两个应用”-->
+
+    <activity android:name="com.hxzk.bj.differnertprocess.DifferentProcessActivity"
+        android:process=":differerntprocess"/>
+    </application>
+
+</manifest>
